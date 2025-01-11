@@ -10,7 +10,7 @@ st.session_state.setdefault("show_signup", False)  # Track whether to show signu
 
 # Use Streamlit's secret management system
 DB_SERVER = st.secrets["DB_SERVER"]
-DB_PORT = st.secrets["DB_PORT"]
+#DB_PORT = st.secrets["DB_PORT"]
 DB_DATABASE = st.secrets["DB_DATABASE"]
 DB_USERNAME = st.secrets["DB_USERNAME"]
 DB_PASSWORD = st.secrets["DB_PASSWORD"]
@@ -21,9 +21,9 @@ user_session = st.secrets["user_logs"]
 
 # Database connection with specific parameters
 def get_db_connection():
-    host = f"{DB_SERVER},{DB_PORT}"
+    #host = f"{DB_SERVER},{DB_PORT}"
     return pymssql.connect(
-        host=host,  # Server IP or hostname
+        host=DB_SERVER,  # Server IP or hostname
         port=DB_PORT,            # Port number
         user=DB_USERNAME,     # Your username
         password=DB_PASSWORD, # Your password
