@@ -24,7 +24,7 @@ def get_db_connection():
     #host = f"{DB_SERVER},{DB_PORT}"
     return pymssql.connect(
         host=DB_SERVER,  # Server IP or hostname
-        port=DB_PORT,            # Port number
+        #port=DB_PORT,            # Port number
         user=DB_USERNAME,     # Your username
         password=DB_PASSWORD, # Your password
         database=DB_DATABASE, # Database name
